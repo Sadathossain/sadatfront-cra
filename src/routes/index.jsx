@@ -64,7 +64,6 @@ class IndexRoutes extends Component {
   }
     render() {
         const {
-            authenticated,
             loading
         } = this.state;
         const {
