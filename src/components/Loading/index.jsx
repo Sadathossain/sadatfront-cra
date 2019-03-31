@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-
+import Pace from 'react-pace-progress'
 export default class Loading extends Component {
-    render() {
-        return (
-            <h1>LOADING</h1>
-        )
-    }
+  render() {
+      return (
+        <Pace color="#27ae60"/>
+      )
+  }
 }

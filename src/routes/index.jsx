@@ -10,7 +10,7 @@ import {BrowserRouter as Router} from "react-router-dom";
 import logo from '../assets/img/logo.svg';
 import '../sfStyles/indexRoutes.css';
 
-import HomeRoute from "./home";
+import HomeRoutes from "./home";
 
 import Loading from "../components/Loading";
 
@@ -28,7 +28,7 @@ function AuthButton(props) {
             <p>Hello, {props.username}</p>
             <button onClick={props.signout}>Sign out</button>
           </header>
-          <HomeRoute authenticated={props.isAuthenticated}/>
+          <HomeRoutes authenticated={props.isAuthenticated}/>
         </div>
       )
     } else {

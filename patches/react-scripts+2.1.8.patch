@@ -1,0 +1,22 @@
+diff --git a/node_modules/react-scripts/config/webpack.config.js b/node_modules/react-scripts/config/webpack.config.js
+index f6c0e7a..439e206 100644
+--- a/node_modules/react-scripts/config/webpack.config.js
++++ b/node_modules/react-scripts/config/webpack.config.js
+@@ -50,6 +50,8 @@ const cssModuleRegex = /\.module\.css$/;
+ const sassRegex = /\.(scss|sass)$/;
+ const sassModuleRegex = /\.module\.(scss|sass)$/;
+ 
++const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
++
+ // This is the production and development configuration.
+ // It is focused on developer experience, fast rebuilds, and a minimal bundle.
+ module.exports = function(webpackEnv) {
+@@ -516,6 +518,8 @@ module.exports = function(webpackEnv) {
+       ],
+     },
+     plugins: [
++      // Webpack plugin for the Monaco Editor
++      new MonacoWebpackPlugin({}),
+       // Generates an `index.html` file with the <script> injected.
+       new HtmlWebpackPlugin(
+         Object.assign(
