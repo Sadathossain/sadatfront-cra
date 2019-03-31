@@ -3,14 +3,14 @@ import Cookbook from './Cookbook'
 import Notebook from './Notebook'
 import Markdown from './Markdown'
 import InlineCode from './Markdown/InlineCode'
-// import DiffEditor from './DiffEditor'
+import DiffEditor from './DiffEditor'
 
 export default class App extends Component {
     render() {
-        return <Cookbook/>
+        // return <Cookbook/>
         // return <Notebook/>
         // return <InlineCode/>
         // return <Markdown/>
-        // return <DiffEditor/>
+        return <DiffEditor/>
     }
 }
