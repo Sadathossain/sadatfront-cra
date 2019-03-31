@@ -1,11 +1,17 @@
 {
   "name": "sadatfront",
-  "version": "0.1.0",
+  "description": "Front page of SadatRocks made with CRA",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
+    "@cloud3/notebook": "^1.0.1",
     "firebase": "^5.9.0",
+    "patch-package": "^6.1.0",
+    "postinstall-postinstall": "^2.0.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
+    "react-monaco-editor": "^0.25.1",
+    "react-pace-progress": "^2.0.0",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
     "react-with-firebase-auth": "^1.0.2"
@@ -14,7 +20,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postinstall": "patch-package"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -24,5 +31,14 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "classnames": "^2.2.6",
+    "monaco-editor-webpack-plugin": "^1.7.0",
+    "react-markdown": "^4.0.6"
+  },
+  "main": "index.js",
+  "repository": "https://github.com/Sadathossain/sadatfront-cra.git",
+  "author": "Sadat Hossain <sadat.hossain@hotmail.com>",
+  "license": "MIT"
 }
