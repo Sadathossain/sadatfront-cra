@@ -26,3 +26,4 @@ src/config/firebaseConfig.js
 
 # BACKUP
 backup/
+.vscode/settings.json
