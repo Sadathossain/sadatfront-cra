@@ -14,6 +14,8 @@ import HomeRoutes from "./home";
 
 import Loading from "../components/Loading";
 
+import { Button } from "@blueprintjs/core";
+
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const firebaseAppAuth = firebaseApp.auth();
 const providers = {
@@ -26,7 +28,7 @@ function AuthButton(props) {
         <div>
           <header className="App-header-horizontal">
             <p>Hello, {props.username}</p>
-            <button onClick={props.signout}>Sign out</button>
+            <Button onClick={props.signout} icon="log-out" intent="danger" text="Sign out" />
           </header>
           <HomeRoutes authenticated={props.isAuthenticated}/>
         </div>
@@ -36,7 +38,8 @@ function AuthButton(props) {
         <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <p>Please sign in.</p>
-            <button onClick={props.signin}>Sign in with Google</button>
+            <Button onClick={props.signin} icon="user" intent="success" text="Sign in with Google" />
+            {/* <button onClick={props.signin}>Sign in with Google</button> */}
         </header>
       )
     }

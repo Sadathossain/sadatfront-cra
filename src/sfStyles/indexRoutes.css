@@ -1,3 +1,7 @@
+@import "~normalize.css";
+@import "~@blueprintjs/core/lib/css/blueprint.css";
+@import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
+
 .App {
   /* text-align: center; */
 }
@@ -24,7 +28,7 @@
   background-color: 'transparent';
   display: flex;
   flex-direction: row;
-  align-items: stretch;
+  align-items: center;
   justify-content: space-between;
   font-size: calc(1px + 2vmin);
   /* color: white; */
