@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
 import * as monaco from 'monaco-editor';
+import { withRouter } from 'react-router-dom'
 
-export default class Notebook extends Component {
+ class Notebook extends Component {
   constructor(props) {
     super(props);
     this.containerElement = undefined;
-    this.state = {
-      code: 'console.log("Sadat"); var test = ``; function() { return }',
-      mode: 'javascript',
+    if (this.props.location.state != undefined) {
+      this.state = {
+        code: this.props.location.state.code,
+        mode: this.props.location.state.mode
+      };
+    } else {
+      this.state = {
+        code: '',
+        mode: 'markdown'
+      };
     }
   }
   componentDidMount() {
@@ -16,9 +24,9 @@ export default class Notebook extends Component {
   initMonacoEditor() {
       this.editor = monaco.editor.create(this.containerElement, {
         value: this.state.code,
-      language: this.state.mode,
+        language: this.state.mode,
       });
-        // monaco.editor.setTheme('vs-dark');
+        monaco.editor.setTheme('vs-dark');
   }
   editorRef = (component) => {
     this.containerElement = component;
@@ -31,3 +39,5 @@ export default class Notebook extends Component {
     );
   }
 }
+
+export default withRouter(Notebook)

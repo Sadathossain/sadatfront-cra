@@ -3,18 +3,7 @@ import Editor from '../../components/Editor';
 import Select from '../../components/Select';
 // import styles from '../../sfStyles/Cookbook.less';
 
-const languageData = [
-  'json', 'apl', 'brainfuck', 'clike', 'clojure', 'cmake', 'cobol', 'coffeescript', 'commonlisp', 'crystal', 'css',
-  'cypher', 'cython', 'd', 'dart', 'diff', 'dockerfile', 'dtd', 'dylan', 'ecl', 'eiffel', 'elm', 'erlang', 'factor',
-  'fcl', 'forth', 'fortran', 'gas', 'gherkin', 'go', 'groovy', 'haml', 'haskell', 'haskell-literate', 'haxe', 'htmlembedded',
-  'htmlmixed', 'http', 'idl', 'javascript', 'jinja2', 'jsx', 'less', 'julia', 'livescript', 'lua', 'mathematica', 'mbox', 'mirc',
-  'modelica', 'mscgen', 'mumps', 'nginx', 'nsis', 'ntriples', 'octave', 'oz', 'pascal', 'pegjs', 'perl', 'php', 'pig',
-  'powershell', 'properties', 'protobuf', 'pug', 'puppet', 'python', 'q', 'r', 'rpm', 'ruby', 'rust', 'sas', 'sass',
-  'scheme', 'shell', 'sieve', 'slim', 'smalltalk', 'smarty', 'solr', 'soy', 'sparql', 'spreadsheet', 'sql', 'stex',
-  'stylus', 'swift', 'tcl', 'textile', 'tiddlywiki', 'tiki', 'toml', 'tornado', 'troff', 'ttcn', 'ttcn-cfg',
-  'turtle', 'twig', 'typescript', 'vb', 'vbscript', 'velocity', 'verilog', 'vhdl', 'vue', 'webidl', 'xml', 'xquery', 'yacas', 'yaml',
-];
-
+const languageData = ['python', 'shell', 'javascript', 'textile', 'xml', 'yaml', 'json', 'css', 'dockerfile', 'go', 'ruby', 'typescript', 'vb', 'rust', 'scheme' , 'sql', 'r', 'swift', 'perl', 'php','powershell', 'tcl', 'clojure', 'coffeescript', 'less', 'lua', 'pascal',  'pug', 'markdown'];
 // Monaco Docs https://github.com/react-monaco-editor/react-monaco-editor/blob/master/README.md
 // language= the initial language of the auto created model in the editor.
 // defaultValue= the initial value of the auto created model in the editor.

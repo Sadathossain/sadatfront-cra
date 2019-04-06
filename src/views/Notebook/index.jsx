@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import MarkdownEditor from './MdEditor'
-export default class App extends Component {
-    render() {
-        return (
-            <MarkdownEditor/>
-        )
-    }
+import React from 'react';
+import MarkdownEditor from './MarkdownEditor'
+const NotebookPage  = () => {
+    return (
+        <MarkdownEditor/>
+    )
 }
+export default NotebookPage
+
 
 // import { Link, Route } from "react-router-dom";
 
