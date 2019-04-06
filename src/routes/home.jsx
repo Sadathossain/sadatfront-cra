@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import React, {Component} from "react";
+import { Route, withRouter } from "react-router-dom";
 // core components/views
 import HomePage from "../views/Home";
 import JukeboxPage from "../views/Jukebox";
@@ -8,6 +8,9 @@ import NotebookPage from "../views/Notebook";
 import NewsroomPage from "../views/Newsroom";
 import ForecastPage from "../views/Forecast";
 import WhoamiPage from "../views/Whoami";
+import Cookbook from '../views/Notebook/Cookbook'
+import Notebook from '../views/Notebook/Notebook'
+import DiffEditor from '../views/Notebook/DiffEditor'
 
 import PrivateRoute from "../layouts/Private"
 
@@ -36,6 +39,24 @@ const homeRoutes = [
     sidebarName: "Notebook",
     navbarName: "Notebook",
     component: NotebookPage
+  },
+  {
+    path: "/notebook/cookbook",
+    sidebarName: "Cookbook",
+    navbarName: "Cookbook",
+    component: Cookbook
+  },
+  {
+    path: "/notebook/notebook",
+    sidebarName: "Notebook",
+    navbarName: "Notebook",
+    component: Notebook
+  },
+  {
+    path: "/notebook/diffeditor",
+    sidebarName: "DiffEditor",
+    navbarName: "DiffEditor",
+    component: DiffEditor
   },
   {
     path: "/newsroom",
@@ -79,21 +100,28 @@ function NoMatch({ location }) {
   }
 }
 
-function HomeRoutes(props) {
-  return (
-    <Router>
-    {homeRoutes.map((route, index) => (
-      <Route
-      key={index}>
-        <PrivateRoute
-        exact path={route.path}
-        component={route.component}
-        authenticated={props.authenticated}/>
-      </Route>
-    ))
+class HomeRoutes extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      location: props.history.location
+    }
   }
-  </Router>
-  );
+  render() {
+    const props = this.props;
+    return (
+      homeRoutes.map((route, index) => (
+        <Route
+        key={index}>
+          <PrivateRoute
+          exact path={route.path}
+          component={route.component}
+          authenticated={props.authenticated}/>
+        </Route>
+      ))
+    );
+  }
+
 }
 
-export default HomeRoutes;
+export default withRouter(HomeRoutes);

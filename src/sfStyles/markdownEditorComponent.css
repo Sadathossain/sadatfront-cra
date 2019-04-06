@@ -35,7 +35,7 @@ color: #634DBF;
 }
 .editor-pane {
 position: fixed;
-top: 36px;
+top: 40px;
 left: 0;
 bottom: 0;
 width: 50%;
@@ -47,7 +47,7 @@ overflow: auto;
 .result-pane > div {
 background-color: rgb(43, 48, 59);
 position: fixed;
-top: 35px;
+top: 40px;
 right: 0;
 left: 50%;
 bottom: 0;
@@ -58,8 +58,8 @@ color: rgb(192, 197, 206);
 font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
 font-size: 16px;
 line-height: 1.5em;
-border-top: 1px solid #ccc;
-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+/* border-top: 1px solid #ccc; */
+/* box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4); */
 }
 
 .markdown-controls {
